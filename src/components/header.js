@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import AppNav from "./nav";
 import AppNotifications from "./notifications";
+import AppProfile from "./profile";
 
 export default function() {
   const height = 70;
@@ -24,6 +25,7 @@ export default function() {
           {/* notifications & profile */}
           <div className="header-container__right">
             <AppNotifications />
+            <AppProfile />
           </div>
         </div>
       </div>
@@ -67,6 +69,9 @@ export default function() {
         .header-container__right {
           display: flex;
           align-items: center;
+        }
+        .header-container__right > div + div {
+          margin-left: 15px;
         }
 
         .logo a {
