@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import AppNav from "./nav";
+import AppNotifications from "./notifications";
 
 export default function() {
   const height = 70;
@@ -9,6 +10,7 @@ export default function() {
     <header className="app-header">
       <div className="container">
         <div className="header-container">
+          {/* logo & nav */}
           <div className="header-container__left">
             <div className="logo">
               <Link href="/">
@@ -19,7 +21,10 @@ export default function() {
             <AppNav />
           </div>
 
-          <div className="header-container__right"></div>
+          {/* notifications & profile */}
+          <div className="header-container__right">
+            <AppNotifications />
+          </div>
         </div>
       </div>
 
@@ -38,7 +43,7 @@ export default function() {
         }
 
         .container {
-          max-width: 1230px;
+          max-width: 1520px;
           padding-left: 15px;
           padding-right: 15px;
           margin-left: auto;
@@ -55,13 +60,17 @@ export default function() {
           justify-content: space-between;
         }
         .header-container__left {
-          width: 72.4%;
+          width: 896px;
           display: flex;
           justify-content: space-between;
         }
+        .header-container__right {
+          display: flex;
+          align-items: center;
+        }
 
         .logo a {
-          width: 102px;
+          width: 106px;
           height: 100%;
           display: flex;
           justify-content: flex-end;
