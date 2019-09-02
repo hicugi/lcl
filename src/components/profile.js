@@ -7,8 +7,9 @@ export default function() {
 
       <style jsx>{`
         .profile-btn {
-          width: 32px;
-          height: 32px;
+          width: 40px;
+          height: 40px;
+          padding: 0;
           border: none;
           display: flex;
           justify-content: center;

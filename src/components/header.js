@@ -35,9 +35,15 @@ export default function() {
           --color: #ffad0d;
         }
 
+        html,
+        body {
+          height: 100%;
+        }
         body {
           margin: 0;
+          background-color: #fafafa;
           font-family: "Roboto", sans-serif;
+          font-size: 14px;
         }
         strong {
           font-family: "Roboto-Bold", sans-serif;
@@ -53,6 +59,7 @@ export default function() {
         }
 
         .app-header {
+          margin-bottom: 30px;
           background-color: #000;
         }
 
@@ -71,7 +78,7 @@ export default function() {
           align-items: center;
         }
         .header-container__right > div + div {
-          margin-left: 15px;
+          margin-left: 20px;
         }
 
         .logo a {
@@ -85,6 +92,13 @@ export default function() {
           font-weight: bold;
           text-decoration: none;
           letter-spacing: 6px;
+        }
+
+        .block {
+          border: 1px solid #f7f7f7;
+          padding: 0 24px;
+          background-color: #fff;
+          border-radius: 4px;
         }
       `}</style>
     </header>

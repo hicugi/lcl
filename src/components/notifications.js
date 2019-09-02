@@ -14,14 +14,14 @@ export default function() {
       <style global jsx>{`
         .notify-btn {
           position: relative;
-          padding: 0 0 0 27px;
+          padding: 0 0 0 32px;
           display: flex;
           background: none;
           border: none;
         }
 
         .notify-btn__ico {
-          width: 16px;
+          width: 20px;
           height: 100%;
           position: absolute;
           left: 5px;
@@ -49,6 +49,7 @@ export default function() {
           border-radius: 4px;
           font-size: 14px;
           font-weight: bold;
+          letter-spacing: 1px;
         }
       `}</style>
     </div>

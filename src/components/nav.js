@@ -62,6 +62,7 @@ export default function() {
           color: inherit;
           align-items: center;
           text-decoration: none;
+          font-size: 16px;
           letter-spacing: 1.5px;
         }
 
