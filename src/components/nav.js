@@ -49,9 +49,12 @@ export default function() {
           justify-content: space-between;
           list-style: none;
         }
+
         .nav-list__item {
+          position: relative;
           color: #fff;
         }
+
         .nav-list__item a {
           height: 70px;
           padding: 0 26px;
@@ -61,8 +64,18 @@ export default function() {
           text-decoration: none;
           letter-spacing: 1.5px;
         }
+
         .nav-list__item--active {
           color: var(--color);
+        }
+        .nav-list__item--active::before {
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: var(--color);
+          content: "";
         }
       `}</style>
     </nav>
