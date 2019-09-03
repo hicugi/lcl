@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function() {
+  const { pathname } = useRouter();
   const items = [
     {
       title: "Кредиторы",
@@ -23,10 +25,10 @@ export default function() {
 
   return (
     <nav className="app-nav">
-      <ul key="ul" className="nav-list">
+      <ul className="nav-list">
         {items.map(({ title, link }, index) => {
           const cls = ["nav-list__item"];
-          if (typeof window === "object" && window.location.pathname === link) {
+          if (pathname.indexOf(link) === 0) {
             cls.push("nav-list__item--active");
           }
 
