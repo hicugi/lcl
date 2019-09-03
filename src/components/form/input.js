@@ -22,6 +22,7 @@ export default function({ type, name, hint, placeholder, change }) {
         .form-input__control {
           padding-top: 4px;
         }
+
         .form-input__hint {
           position: absolute;
           right: 20px;
@@ -29,6 +30,7 @@ export default function({ type, name, hint, placeholder, change }) {
           margin-top: 2px;
           transform: translateY(-50%);
           font-size: 16px;
+          text-transform: uppercase;
         }
       `}</style>
     </div>
