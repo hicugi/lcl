@@ -33,6 +33,7 @@ export default function() {
       <style global jsx>{`
         :root {
           --color: #ffad0d;
+          --color-title: #022047;
         }
 
         html,
@@ -59,7 +60,7 @@ export default function() {
         }
 
         .app-header {
-          margin-bottom: 30px;
+          margin-bottom: 44px;
           background-color: #000;
         }
 
@@ -94,11 +95,43 @@ export default function() {
           letter-spacing: 6px;
         }
 
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -10px;
+          margin-right: -10px;
+        }
+        .row > * {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .row > *:not([class^="col-"]) {
+          flex-grow: 1;
+        }
+        @media (min-width: 992px) {
+          .col-md-3 {
+            width: 25%;
+          }
+        }
+
         .block {
           border: 1px solid #f7f7f7;
-          padding: 0 24px;
+          padding: 32px 30px;
           background-color: #fff;
           border-radius: 4px;
+        }
+
+        .title {
+          margin: 0 0 18px;
+          color: var(--color-title);
+          font-size: 28px;
+          font-weight: black;
+        }
+        .title2 {
+          margin: 0;
+          color: var(--color-title);
+          font-size: 18px;
+          font-weight: black;
         }
       `}</style>
     </header>
