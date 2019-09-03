@@ -5,8 +5,6 @@ import AppNotifications from "./notifications";
 import AppProfile from "./profile";
 
 export default function() {
-  const height = 70;
-
   return (
     <header className="app-header">
       <div className="container">
@@ -34,6 +32,12 @@ export default function() {
         :root {
           --color: #ffad0d;
           --color-title: #022047;
+        }
+
+        *,
+        *::before,
+        *::afetr {
+          box-sizing: border-box;
         }
 
         html,
@@ -65,7 +69,7 @@ export default function() {
         }
 
         .header-container {
-          height: ${height}px;
+          height: 70px;
           display: flex;
           justify-content: space-between;
         }
@@ -104,6 +108,7 @@ export default function() {
         .row > * {
           padding-left: 10px;
           padding-right: 10px;
+          box-sizing: border-box;
         }
         .row > *:not([class^="col-"]) {
           flex-grow: 1;
@@ -111,6 +116,9 @@ export default function() {
         @media (min-width: 992px) {
           .col-md-3 {
             width: 25%;
+          }
+          .col-md-4 {
+            width: 33.333333%;
           }
         }
 
@@ -128,10 +136,10 @@ export default function() {
           font-weight: black;
         }
         .title2 {
-          margin: 0;
+          margin: 0 0 25px;
           color: var(--color-title);
           font-size: 18px;
-          font-weight: black;
+          font-weight: 900;
         }
       `}</style>
     </header>
