@@ -131,6 +131,7 @@ class FormSelect extends React.Component {
             font-size: 16px;
             text-align: left;
           }
+          .select-list__item:hover,
           .select-list__item--active {
             background-color: #f8f9fb;
           }
