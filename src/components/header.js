@@ -144,6 +144,36 @@ export default function() {
           font-size: 18px;
           font-weight: 900;
         }
+
+        .form-container {
+          max-width: 300px;
+        }
+        .form-container_border {
+          position: relative;
+        }
+        .form-container_border::before,
+        .form-container_border::after {
+          position: absolute;
+          top: 0;
+          width: 1px;
+          height: 100%;
+          background-color: #e2e4e8;
+          content: "";
+        }
+        .form-container_border::before {
+          left: -26px;
+        }
+        .form-container_border::after {
+          right -40px
+        }
+        @media (max-width: 1519px) {
+          .form-container_border::before {
+            left: -10px;
+          }
+          .form-container_border::after {
+            right -10px
+          }
+        }
       `}</style>
     </header>
   );
