@@ -15,8 +15,8 @@ class Range extends React.Component {
     this.$btnAfter = React.createRef();
   }
 
-  componentWillReceiveProps(props) {
-    const { value } = props;
+  componentWillMount() {
+    const { value, max: propMax } = this.props;
     const { min, max } = value || {};
 
     let newState = {
@@ -24,8 +24,9 @@ class Range extends React.Component {
       after: 100
     };
 
-    if (min) newState.before = min;
-    if (max) newState.after = max;
+    const p = (propMax || 100) / 100;
+    if (min) newState.before = min / p;
+    if (max) newState.after = max / p;
 
     this.setState(newState);
   }
@@ -82,15 +83,18 @@ class Range extends React.Component {
 
       const { before, after } = this.state;
 
-      const { name, change } = this.props;
-      if (change)
+      const { name, max, change } = this.props;
+      if (change) {
+        const p = (max || 100) / 100;
+
         change({
           name,
           value: {
-            min: Math.round(before),
-            max: Math.round(before + after)
+            min: Math.round(before * p),
+            max: Math.round((before + after) * p)
           }
         });
+      }
     });
 
     const onMouseDown = e => {
