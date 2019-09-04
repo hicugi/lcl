@@ -32,6 +32,7 @@ export default function({ currencies, fields, change }) {
           {...formInputProps}
           label="Сумма залога от"
           name="deposit_from"
+          value={fields.deposit_from}
         />
 
         {/* to */}
@@ -40,6 +41,7 @@ export default function({ currencies, fields, change }) {
           {...formInputProps}
           label="До"
           name="deposit_to"
+          value={fields.deposit_to}
         />
 
         {/* rate */}
