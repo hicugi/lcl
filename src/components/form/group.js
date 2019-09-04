@@ -2,6 +2,7 @@ import React from "react";
 import FormInput from "./input";
 import FormSelect from "./select";
 import FormRange from "./range";
+import FormCheckbox from "./checkbox";
 
 export default function({ type, label, ...atrs }) {
   const formType = type || "text";
@@ -13,6 +14,7 @@ export default function({ type, label, ...atrs }) {
       {["text", "number"].includes(formType) && <FormInput {...atrs} />}
       {formType === "select" && <FormSelect {...atrs} />}
       {formType === "range" && <FormRange {...atrs} />}
+      {formType === "checkbox" && <FormCheckbox {...atrs} />}
 
       <style global jsx>{`
         .form-group {
