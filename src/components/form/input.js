@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function({ type, name, hint, placeholder, change }) {
+export default function({ type, name, value, hint, placeholder, change }) {
   const cls = ["form-input", "form-input__control"];
   if (hint) cls.push("form-input_hint");
 
@@ -9,6 +9,7 @@ export default function({ type, name, hint, placeholder, change }) {
       <input
         className="form-control"
         type={type || "text"}
+        value={value}
         placeholder={placeholder}
         onChange={e => change && change({ name, value: e.target.value })}
       />

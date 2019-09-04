@@ -16,6 +16,17 @@ class Range extends React.Component {
   }
 
   UNSAFE_componentWillMount() {
+    setTimeout(() => {
+      this.parseProps();
+    });
+  }
+  UNSAFE_componentWillReceiveProps() {
+    setTimeout(() => {
+      this.parseProps();
+    });
+  }
+
+  parseProps() {
     const { value, max: propMax } = this.props;
     const { min, max } = value || {};
 
@@ -26,7 +37,7 @@ class Range extends React.Component {
 
     const p = (propMax || 100) / 100;
     if (min) newState.before = min / p;
-    if (max) newState.after = max / p;
+    if (max) newState.after = (max - min) / p;
 
     this.setState(newState);
   }
@@ -120,8 +131,8 @@ class Range extends React.Component {
     const afterText = Math.round((before + after) * p);
 
     return (
-      <div ref={this.$range} className="range">
-        <div className="range-line">
+      <div className="range">
+        <div ref={this.$range} className="range-line">
           {/* line */}
           <div
             className="range-line__inner"
