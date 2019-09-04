@@ -50,6 +50,7 @@ export default function() {
       <style jsx>{`
         .submenu-container {
           display: flex;
+          margin-bottom: 40px;
         }
         .submenu {
           padding: 0px 30px;
