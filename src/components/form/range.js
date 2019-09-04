@@ -94,7 +94,12 @@ class Range extends React.Component {
   }
 
   render() {
+    const { hint, max } = this.props;
     const { before, after } = this.state;
+
+    const p = (max || 100) / 100;
+    const beforeText = Math.round(before * p);
+    const afterText = Math.round((before + after) * p);
 
     return (
       <div ref={this.$range} className="range">
@@ -117,8 +122,8 @@ class Range extends React.Component {
         </div>
 
         <div className="range-text">
-          <span>от {Math.round(before)}%</span>
-          <span>до {Math.round(before + after)}%</span>
+          <span>{["от", beforeText, hint || "%"].join(" ")}</span>
+          <span>{["до", afterText, hint || "%"].join(" ")}</span>
         </div>
 
         <style jsx>{`
