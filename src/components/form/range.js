@@ -15,7 +15,7 @@ class Range extends React.Component {
     this.$btnAfter = React.createRef();
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const { value, max: propMax } = this.props;
     const { min, max } = value || {};
 
