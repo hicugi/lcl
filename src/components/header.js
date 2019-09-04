@@ -91,6 +91,7 @@ export default function() {
         }
 
         .logo a {
+          position: relative;
           width: 106px;
           height: 100%;
           display: flex;
@@ -101,6 +102,14 @@ export default function() {
           font-weight: bold;
           text-decoration: none;
           letter-spacing: 6px;
+        }
+        .logo a::before {
+          position: absolute;
+          width: 30px;
+          height: 42px;
+          left: 0;
+          background-color: var(--color);
+          content: "";
         }
 
         .row {
