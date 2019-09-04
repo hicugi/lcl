@@ -81,7 +81,6 @@ class FormSelect extends React.Component {
         <style jsx>{`
           .select {
             position: relative;
-            max-width: 300px;
           }
 
           .select-btn {

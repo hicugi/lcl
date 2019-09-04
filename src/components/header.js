@@ -120,6 +120,9 @@ export default function() {
           .col-md-4 {
             width: 33.333333%;
           }
+          .col-md-9 {
+            width: 75%;
+          }
         }
 
         .block {
