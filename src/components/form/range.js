@@ -3,8 +3,7 @@ import React from "react";
 class Range extends React.Component {
   state = {
     before: 0,
-    after: 100,
-    value: 0
+    after: 100
   };
 
   constructor(props) {
@@ -14,6 +13,21 @@ class Range extends React.Component {
     this.$line = React.createRef();
     this.$btnBefore = React.createRef();
     this.$btnAfter = React.createRef();
+  }
+
+  componentWillReceiveProps(props) {
+    const { value } = props;
+    const { min, max } = value || {};
+
+    let newState = {
+      before: 0,
+      after: 100
+    };
+
+    if (min) newState.before = min;
+    if (max) newState.after = max;
+
+    this.setState(newState);
   }
 
   componentDidMount() {

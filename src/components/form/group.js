@@ -37,7 +37,6 @@ export default function({ type, label, ...atrs }) {
           background: none;
           border-radius: 4px;
           font-size: 16px;
-          font-weight: bold;
           letter-spacing: 0.4px;
           text-align: left;
         }
