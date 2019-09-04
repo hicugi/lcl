@@ -10,7 +10,7 @@ export default function({ currencies, fields, change }) {
     <section>
       <h2 className="title2">О кредите</h2>
 
-      <div className="form-container">
+      <div className="form-container form-container_limit">
         {/* currency */}
         <FormGroup
           {...formGroupProps}
@@ -27,8 +27,9 @@ export default function({ currencies, fields, change }) {
           type="number"
           label="Сумма кредита от"
           name="credit_from"
+          value={fields.credit_from}
           placeholder="224500400"
-          hint="RUB"
+          hint={(fields.credit_currency || {}).value}
         />
 
         {/* to */}
@@ -37,6 +38,7 @@ export default function({ currencies, fields, change }) {
           type="number"
           label="До"
           name="credit_to"
+          value={fields.credit_to}
           placeholder="224500400"
           hint={(fields.credit_currency || {}).value}
         />
@@ -47,6 +49,7 @@ export default function({ currencies, fields, change }) {
           type="range"
           label="Ставка от-до %"
           name="credit_rate"
+          value={fields.credit_rate}
         />
       </div>
     </section>

@@ -15,7 +15,7 @@ export default function({ currencies, fields, change }) {
     <section>
       <h2 className="title2">О залоге</h2>
 
-      <div className="form-container form-container_border">
+      <div className="form-container form-container_limit form-container_border">
         {/* currency */}
         <FormGroup
           {...formGroupProps}
@@ -48,6 +48,7 @@ export default function({ currencies, fields, change }) {
           type="range"
           label="Дисконт залога от-до %"
           name="deposit_rate"
+          value={fields.deposit_rate}
         />
       </div>
     </section>

@@ -55,6 +55,10 @@ export default function() {
           font-weight: bold;
         }
 
+        main {
+          padding-bottom: 40px;
+        }
+
         .container {
           max-width: 1520px;
           padding-left: 15px;
@@ -131,6 +135,9 @@ export default function() {
           background-color: #fff;
           border-radius: 4px;
         }
+        .block__footer {
+          padding-top: 17px;
+        }
 
         .title {
           margin: 0 0 18px;
@@ -145,7 +152,7 @@ export default function() {
           font-weight: 900;
         }
 
-        .form-container {
+        .form-container_limit {
           max-width: 300px;
         }
         .form-container_border {
