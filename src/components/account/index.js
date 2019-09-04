@@ -1,5 +1,6 @@
 import React from "react";
 import Main from "./main";
+import Password from "./password";
 
 export default () => {
   const padding = 25;
@@ -14,6 +15,10 @@ export default () => {
       {/* main */}
       <div className="account__main">
         <Main />
+
+        <section className="account-section">
+          <Password />
+        </section>
       </div>
 
       <style jsx>{`
@@ -39,6 +44,12 @@ export default () => {
           width: 100%;
           border-radius: 100%;
           background: #a4aebd;
+        }
+
+        .account-section {
+          padding-top: 30px;
+          border-top: 1px solid #e0e4e8;
+          margin-top: 52px;
         }
       `}</style>
     </div>
