@@ -42,6 +42,10 @@ export default function({ variant, block, children, click }) {
           color: var(--color);
           font-size: 16px;
         }
+        .btn_danger {
+          border: 2px solid var(--color-danger);
+          color: var(--color-danger);
+        }
 
         .btn_block {
           padding: 0 15px;

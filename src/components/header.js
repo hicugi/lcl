@@ -32,6 +32,7 @@ export default function() {
         :root {
           --color: #ffad0d;
           --color-title: #022047;
+          --color-danger: #ff4b5b;
         }
 
         *,

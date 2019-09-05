@@ -2,6 +2,7 @@ import React from "react";
 import Main from "./main";
 import Password from "./password";
 import Auth from "./auth";
+import Button from "../button";
 
 export default () => {
   const padding = 25;
@@ -24,6 +25,10 @@ export default () => {
 
         <section className="account-section">
           <Auth />
+        </section>
+
+        <section className="account-section account-section__footer">
+          <Button variant="danger">Выйти</Button>
         </section>
       </div>
 
@@ -78,6 +83,11 @@ export default () => {
           color: #8f9aad;
           font-size: 16px;
           line-height: 1.25em;
+        }
+
+        .account-section__footer {
+          padding-top: 40px;
+          padding-bottom: 30px;
         }
       `}</style>
     </div>
