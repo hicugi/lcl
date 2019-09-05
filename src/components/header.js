@@ -143,6 +143,7 @@ export default function() {
           padding: 32px 30px;
           background-color: #fff;
           border-radius: 4px;
+          box-shadow: 0 1px 2px #e0e4e8;
         }
         .block__footer {
           padding-top: 17px;

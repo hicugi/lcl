@@ -8,7 +8,7 @@ export default () => {
     <div>
       <AppHeader />
 
-      <div className="container">
+      <main className="container">
         <Submenu />
 
         <div className="row">
@@ -18,7 +18,7 @@ export default () => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

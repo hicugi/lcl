@@ -1,8 +1,10 @@
 import React from "react";
 
-export default function({ variant, children, click }) {
+export default function({ variant, block, children, click }) {
   const cls = ["btn"];
   cls.push(`btn_${variant || "default"}`);
+
+  if (block) cls.push("btn_block");
 
   return (
     <button
@@ -39,6 +41,12 @@ export default function({ variant, children, click }) {
           border: 1px solid var(--color);
           color: var(--color);
           font-size: 16px;
+        }
+
+        .btn_block {
+          padding: 0 15px;
+          width: 100%;
+          display: block;
         }
 
         .btn svg {

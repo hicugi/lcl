@@ -1,9 +1,11 @@
 import React from "react";
 import Main from "./main";
 import Password from "./password";
+import Auth from "./auth";
 
 export default () => {
   const padding = 25;
+  const paddingContainer = 15;
 
   return (
     <div className="account">
@@ -19,9 +21,13 @@ export default () => {
         <section className="account-section">
           <Password />
         </section>
+
+        <section className="account-section">
+          <Auth />
+        </section>
       </div>
 
-      <style jsx>{`
+      <style jsx global>{`
         .account {
           padding: 0 8px;
           margin: 0 -${padding}px;
@@ -50,6 +56,28 @@ export default () => {
           padding-top: 30px;
           border-top: 1px solid #e0e4e8;
           margin-top: 52px;
+        }
+
+        .account-container {
+          display: flex;
+          margin-left: -${paddingContainer}px;
+          margin-right: -${paddingContainer}px;
+        }
+        .account-container > div {
+          padding-left: ${paddingContainer}px;
+          padding-right: ${paddingContainer}px;
+        }
+        .account-container > div:first-child {
+          width: 226px;
+        }
+
+        .account-hint {
+          padding-top: 4px;
+          display: flex;
+          align-items: center;
+          color: #8f9aad;
+          font-size: 16px;
+          line-height: 1.25em;
         }
       `}</style>
     </div>
