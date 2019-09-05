@@ -1,4 +1,7 @@
 module.exports = {
+  experimental: {
+    publicDirectory: true
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

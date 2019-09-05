@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormToggle from "../form/toggle";
+import AuthDialog from "./auth-dialog";
 
 export default function() {
   const options = [
@@ -13,9 +14,11 @@ export default function() {
     }
   ];
   const [value, setValue] = useState(options[0]);
+  const [show, setDialog] = useState(true);
 
-  function handleChange(value) {
-    setValue(value);
+  function handleChange(item) {
+    setDialog((item || {}).value === true);
+    setValue(item);
   }
 
   return (
@@ -30,6 +33,8 @@ export default function() {
           2-х факторная аутентификация делает ваши данные более защищенными.
         </div>
       </div>
+
+      {show && <AuthDialog close={() => setDialog(false)} />}
 
       <style jsx>{`
         .account-form {
