@@ -13,8 +13,8 @@ export default function() {
       value: false
     }
   ];
-  const [value, setValue] = useState(options[0]);
-  const [show, setDialog] = useState(true);
+  const [value, setValue] = useState(options[1]);
+  const [show, setDialog] = useState(false);
 
   function handleChange(item) {
     setDialog((item || {}).value === true);
