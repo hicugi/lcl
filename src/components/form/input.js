@@ -4,6 +4,11 @@ export default function({ type, name, value, hint, placeholder, change }) {
   const cls = ["form-input", "form-input__control"];
   if (hint) cls.push("form-input_hint");
 
+  const handleChange = e => {
+    if (!change) return;
+    change({ name, value: e.target.value });
+  };
+
   return (
     <div className={cls.join(" ")}>
       <input
@@ -11,7 +16,7 @@ export default function({ type, name, value, hint, placeholder, change }) {
         type={type || "text"}
         value={value}
         placeholder={placeholder}
-        onChange={e => change && change({ name, value: e.target.value })}
+        onChange={handleChange}
       />
       {hint && <span className="form-input__hint">{hint}</span>}
 

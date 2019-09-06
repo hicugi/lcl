@@ -11,7 +11,9 @@ export default function({ type, label, error, ...atrs }) {
     <div className="form-group">
       {label && <label className="form-group__label">{label}</label>}
 
-      {["text", "number"].includes(formType) && <FormInput {...atrs} />}
+      {["text", "number"].includes(formType) && (
+        <FormInput type={formType} {...atrs} />
+      )}
       {formType === "select" && <FormSelect {...atrs} />}
       {formType === "range" && <FormRange {...atrs} />}
       {formType === "checkbox" && <FormCheckbox {...atrs} />}
