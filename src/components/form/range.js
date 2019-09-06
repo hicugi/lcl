@@ -199,6 +199,7 @@ class Range extends React.Component {
             border: none;
             background-color: var(--color);
             border-radius: 100%;
+            outline: none;
           }
           .range-btn__before {
             left: 0;
